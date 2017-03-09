@@ -8,7 +8,7 @@ public class Stack {
 
 	private int[] ITEMS = new int[CAPACITY];
 
-	public int total = EMPTY_STACK_VALUE;
+	private int total = EMPTY_STACK_VALUE;
 
 	public void push(int i) {
 		if (!isFull()) {
