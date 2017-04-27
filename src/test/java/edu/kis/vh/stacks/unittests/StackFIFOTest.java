@@ -7,41 +7,6 @@ import edu.kis.vh.stacks.StackFIFO;
 
 public class StackFIFOTest {
 
-	public void testPush() {
-		StackFIFO stackObj = new StackFIFO();
-		int testValue = 4;
-		stackObj.push(testValue);
-
-		int result = stackObj.top();
-		Assert.assertEquals(testValue, result);
-	}
-
-	@Test
-	public void testIsEmpty() {
-		StackFIFO stackObj = new StackFIFO();
-		boolean result = stackObj.isEmpty();
-		Assert.assertEquals(true, result);
-
-		stackObj.push(888);
-
-		result = stackObj.isEmpty();
-		Assert.assertEquals(false, result);
-	}
-
-	@Test
-	public void testIsFull() {
-		StackFIFO stackObj = new StackFIFO();
-		final int STACK_CAPACITY = 12;
-		for (int i = 0; i < STACK_CAPACITY; i++) {
-			boolean result = stackObj.isFull();
-			Assert.assertEquals(false, result);
-			stackObj.push(888);
-		}
-
-		boolean result = stackObj.isFull();
-		Assert.assertEquals(true, result);
-	}
-
 	@Test
 	public void testTop() {
 		StackFIFO stackObj = new StackFIFO();
