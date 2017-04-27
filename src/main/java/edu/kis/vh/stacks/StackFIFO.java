@@ -19,4 +19,11 @@ public class StackFIFO extends Stack {
 
 		return ret;
 	}
+	@Override	
+	public int top() {
+		if (isEmpty()) {
+			return EMPTY_STACK_VALUE;
+		}
+		return ITEMS[0];
+	}
 }

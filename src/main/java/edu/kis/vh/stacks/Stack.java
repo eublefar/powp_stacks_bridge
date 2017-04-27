@@ -2,13 +2,13 @@ package edu.kis.vh.stacks;
 
 public class Stack {
 
-	private static final int EMPTY_STACK_VALUE = -1;
+	protected static final int EMPTY_STACK_VALUE = -1;
 
-	private static final int CAPACITY = 12;
+	protected static final int CAPACITY = 12;
 
-	private int[] ITEMS = new int[CAPACITY];
+	protected int[] ITEMS = new int[CAPACITY];
 
-	private int total = EMPTY_STACK_VALUE;
+	protected int total = EMPTY_STACK_VALUE;
 
 	public int getTotal() {
 		return total;
