@@ -4,7 +4,7 @@ public class Node {
 // Stack List uses getValue(); in pop and peek functions
 // 
 //	
-	private int value; 
+	final private int value; 
 //	getNext and getPrev are now used in StackList
 //	
 //	
