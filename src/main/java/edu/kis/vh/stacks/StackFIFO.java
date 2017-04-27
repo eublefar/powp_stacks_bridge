@@ -1,9 +1,16 @@
 package edu.kis.vh.stacks;
 
+/**
+ * @author evil_unicorn
+ * FIFO stack 
+ */
 public class StackFIFO extends Stack {
-
+//TODO: implement without temp stack
 	final private Stack temp = new Stack();
 
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.Stack#pop()
+	 */
 	@Override
 	public int pop() {
 		
@@ -19,6 +26,9 @@ public class StackFIFO extends Stack {
 
 		return ret;
 	}
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.Stack#top()
+	 */
 	@Override	
 	public int top() {
 		if (isEmpty()) {
