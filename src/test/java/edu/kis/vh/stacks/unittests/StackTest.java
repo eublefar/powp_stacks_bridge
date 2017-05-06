@@ -3,6 +3,7 @@ package edu.kis.vh.stacks.unittests;
 import org.junit.Assert;
 import org.junit.Test;
 
+import bridge_lab.StackArray;
 import edu.kis.vh.stacks.IStack;
 import edu.kis.vh.stacks.Stack;
 
@@ -32,7 +33,7 @@ public class StackTest {
 
 	@Test
 	public void testIsFull() {
-		IStack stackObj = new Stack();
+		IStack stackObj = new Stack(new StackArray());
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = stackObj.isFull();

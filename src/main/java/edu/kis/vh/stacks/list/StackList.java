@@ -2,6 +2,12 @@ package edu.kis.vh.stacks.list;
 
 import edu.kis.vh.stacks.IStack;
 
+/**
+ * @author nik
+ * metody uzyteczne do refaktoryzacji:
+ * - Refactor - Extract Interface
+ * - 
+ */
 public class StackList implements IStack {
 
 	private static final int EMPTY_STACK_VALUE = -1;
