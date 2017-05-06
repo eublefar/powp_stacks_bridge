@@ -1,8 +1,14 @@
 package edu.kis.vh.stacks;
 
-import bridge_lab.StackArray;
+import edu.kis.vh.stacks.list.StackArray;
 import edu.kis.vh.stacks.list.StackList;
 
+/**
+ * @author nik
+ * Konsekwencją zamniany typu zmniennej stack z StackArray na interfejs IStack jest to 
+ * że klasa Stack może być zaimplementowana przez różne klasy. Wynnikiem tego też jest to 
+ * że klasa Stack jest faktycznie zbędna.
+ */
 public class Stack implements IStack {
 
 	protected  IStack stack = new StackList();

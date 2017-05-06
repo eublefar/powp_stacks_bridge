@@ -3,9 +3,9 @@ package edu.kis.vh.stacks.unittests;
 import org.junit.Assert;
 import org.junit.Test;
 
-import bridge_lab.StackArray;
 import edu.kis.vh.stacks.IStack;
 import edu.kis.vh.stacks.Stack;
+import edu.kis.vh.stacks.list.StackArray;
 
 public class StackTest {
 

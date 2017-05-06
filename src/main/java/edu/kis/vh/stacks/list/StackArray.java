@@ -1,4 +1,4 @@
-package bridge_lab;
+package edu.kis.vh.stacks.list;
 
 import edu.kis.vh.stacks.IStack;
 
