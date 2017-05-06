@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import edu.kis.vh.stacks.IStack;
 import edu.kis.vh.stacks.Stack;
-import edu.kis.vh.stacks.list.StackArray;
+import edu.kis.vh.stacks.implementation.StackArray;
 
 public class StackTest {
 
