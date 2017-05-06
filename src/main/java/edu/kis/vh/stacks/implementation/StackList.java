@@ -10,7 +10,6 @@ import edu.kis.vh.stacks.IStack;
  */
 public class StackList implements IStack {
 
-	private static final int EMPTY_STACK_VALUE = -1;
 	private Node last;
 
 	public void push(int i) {
@@ -33,14 +32,14 @@ public class StackList implements IStack {
 
 	public int top() {
 		if (isEmpty()) {
-			return EMPTY_STACK_VALUE;
+			return IStack.EMPTY_STACK_VALUE;
 		}
 		return last.getValue();
 	}
 
 	public int pop() {
 		if (isEmpty()) {
-			return EMPTY_STACK_VALUE;
+			return IStack.EMPTY_STACK_VALUE;
 		}
 		int ret = last.getValue();
 		last = last.getPrev();
