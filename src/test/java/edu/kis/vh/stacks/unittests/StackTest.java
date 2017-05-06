@@ -3,13 +3,14 @@ package edu.kis.vh.stacks.unittests;
 import org.junit.Assert;
 import org.junit.Test;
 
+import edu.kis.vh.stacks.IStack;
 import edu.kis.vh.stacks.Stack;
 
 public class StackTest {
 
 	@Test
 	public void testPush() {
-		Stack stackObj = new Stack();
+		IStack stackObj = new Stack();
 		int testValue = 4;
 		stackObj.push(testValue);
 
@@ -31,7 +32,7 @@ public class StackTest {
 
 	@Test
 	public void testIsFull() {
-		Stack stackObj = new Stack();
+		IStack stackObj = new Stack();
 		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = stackObj.isFull();
@@ -45,7 +46,7 @@ public class StackTest {
 
 	@Test
 	public void testTop() {
-		Stack stackObj = new Stack();
+		IStack stackObj = new Stack();
 		final int EMPTY_STACK_VALUE = -1;
 
 		int result = stackObj.top();
@@ -62,7 +63,7 @@ public class StackTest {
 
 	@Test
 	public void testPop() {
-		Stack stackObj = new Stack();
+		IStack stackObj = new Stack();
 		final int EMPTY_STACK_VALUE = -1;
 
 		int result = stackObj.pop();

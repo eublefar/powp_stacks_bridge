@@ -1,45 +1,67 @@
 package edu.kis.vh.stacks;
 
-public class Stack {
+import bridge_lab.StackArray;
+import edu.kis.vh.stacks.list.StackList;
 
-	protected static final int EMPTY_STACK_VALUE = -1;
+public class Stack implements IStack {
 
-	protected static final int CAPACITY = 12;
+	protected  IStack stack = new StackList();
 
-	protected int[] ITEMS = new int[CAPACITY];
-
-	protected int total = EMPTY_STACK_VALUE;
-
-	public int getTotal() {
-		return total;
+	
+	public Stack() {
+		
+	}
+	
+	
+	public Stack(IStack stack) {
+		super();
+		this.stack = stack;
 	}
 
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.IStack#getTotal()
+	 */
+	@Override
+	public int getTotal() {
+		return stack.getTotal();
+	}
+
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.IStack#push(int)
+	 */
+	@Override
 	public void push(int i) {
-		if (!isFull()) {
-			ITEMS[++total] = i;
-		}
+		stack.push(i);
 	}
 
 	public boolean isEmpty() {
-		return total == EMPTY_STACK_VALUE;
+		return stack.isEmpty();
 	}
 
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.IStack#isFull()
+	 */
+	@Override
 	public boolean isFull() {
-		return total == 11;
+		return stack.isFull();
 	}
 
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.IStack#top()
+	 */
+	@Override
 	public int top() {
-		if (isEmpty()) {
-			return EMPTY_STACK_VALUE;
-		}
-		return ITEMS[total];
+		return stack.top();
 	}
 
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.IStack#pop()
+	 */
+	@Override
 	public int pop() {
-		if (isEmpty()) {
-			return EMPTY_STACK_VALUE;
-		}
-		return ITEMS[total--];
+		return stack.pop();
 	}
+	
+
 
 }

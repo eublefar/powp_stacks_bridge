@@ -1,6 +1,7 @@
 package edu.kis.vh.stacks.demo;
 
 import edu.kis.vh.stacks.StackHanoi;
+import edu.kis.vh.stacks.IStack;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
@@ -41,7 +42,7 @@ class StacksDemo {
 		}
 	}
 
-	static void initStacksByRange(Stack[] stacks, int range) {
+	static void initStacksByRange(IStack[] stacks, int range) {
 		for (int i = 1; i < range; i++) {
 			for (int j = 0; j < stacks.length; j++) {
 				stacks[j].push(i);

@@ -31,9 +31,16 @@ public class StackFIFO extends Stack {
 	 */
 	@Override	
 	public int top() {
-		if (isEmpty()) {
-			return EMPTY_STACK_VALUE;
+		while (!isEmpty()) {
+			temp.push(super.pop());
 		}
-		return ITEMS[0];
+
+		int ret = temp.top();
+
+		while (!temp.isEmpty()) {
+			push(temp.pop());
+		}
+
+		return ret;
 	}
 }
