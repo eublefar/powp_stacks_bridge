@@ -5,7 +5,7 @@ import edu.kis.vh.stacks.IStack;
 public class StackArray implements IStack {
 	protected static final int CAPACITY = 12;
 
-	protected int[] ITEMS = new int[CAPACITY];
+	protected int[] ITEMS = new int[CAPACITY+1];
 
 	protected int total = IStack.EMPTY_STACK_VALUE;
 
@@ -24,7 +24,7 @@ public class StackArray implements IStack {
 	}
 
 	public boolean isFull() {
-		return total == 11;
+		return total == CAPACITY;
 	}
 
 	public int top() {
