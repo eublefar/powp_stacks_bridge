@@ -8,6 +8,9 @@ import edu.kis.vh.stacks.implementation.StackList;
  * Konsekwencją zamniany typu zmniennej stack z StackArray na interfejs IStack jest to 
  * że klasa Stack może być zaimplementowana przez różne klasy. Wynnikiem tego też jest to 
  * że klasa Stack jest faktycznie zbędna.
+ * 
+ * Quick Type Hierarchy pozwala na przeglądanie hierarchii dotyczącej konkretnego elementu (n.p. przeciążania funkcji) 
+ * oraz przesuwania w tej hierarchii. Użycie myszy i ctrl pozwala na przesuwanie wyżej po tej hierarchii oraz znależenie implementacji tej funkcji.
  */
 public class Stack implements IStack {
 
