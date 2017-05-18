@@ -5,7 +5,16 @@ package edu.kis.vh.stacks;
  * FIFO stack 
  */
 public class StackFIFO extends Stack {
-//TODO: implement without temp stack
+
+	public StackFIFO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public StackFIFO(IStack stack) {
+		super(stack);
+		// TODO Auto-generated constructor stub
+	}
+	//TODO: implement without temp stack
 	final private Stack temp = new Stack();
 
 	/* (non-Javadoc)
