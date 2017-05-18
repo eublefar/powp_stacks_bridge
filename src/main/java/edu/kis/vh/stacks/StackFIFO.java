@@ -1,8 +1,12 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.implementation.StackArray;
+
 /**
  * @author evil_unicorn
  * FIFO stack 
+ * Używa StackArray dlatego że często dodaje i usuwa elementy - top, pop. 
+ * StackArray jest szybszy z tego względu że nie potrzebuję alokacji żadnej pamięci przy dodawaniu i usuwaniu
  */
 public class StackFIFO extends Stack {
 
@@ -15,7 +19,7 @@ public class StackFIFO extends Stack {
 		// TODO Auto-generated constructor stub
 	}
 	//TODO: implement without temp stack
-	final private Stack temp = new Stack();
+	final private IStack temp = new StackArray();
 
 	/* (non-Javadoc)
 	 * @see edu.kis.vh.stacks.Stack#pop()
