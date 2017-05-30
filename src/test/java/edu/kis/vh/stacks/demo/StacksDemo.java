@@ -1,11 +1,12 @@
 package edu.kis.vh.stacks.demo;
 
-import edu.kis.vh.stacks.IStack;
+import edu.kis.vh.stacks.IStackRefined;
 import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.factory.ArrayStacksFactory;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 import edu.kis.vh.stacks.factory.IStacksFactory;
 import edu.kis.vh.stacks.factory.ListStacksFactory;
+import edu.kis.vh.stacks.implementation.IStack;
 
 class StacksDemo {
 
@@ -22,7 +23,7 @@ class StacksDemo {
 	}
 
 	static void testStacks(IStacksFactory factory) {
-		IStack[] stacks = { factory.getStandardStack(), factory.getFalseStack(),
+		IStackRefined[] stacks = { factory.getStandardStack(), factory.getFalseStack(),
 						   factory.getFIFOStack(), factory.getHanoiStack()};
 //		no braces
 		initStacksByRange(stacks, 15);
@@ -39,7 +40,7 @@ class StacksDemo {
 //		blank lines
 	}
 
-	static void printStacks(IStack[] stacks) {
+	static void printStacks(IStackRefined[] stacks) {
 		for (int i = 0; i < stacks.length; i++) {
 //			braces
 			while (!stacks[i].isEmpty()) {
@@ -50,7 +51,7 @@ class StacksDemo {
 		}
 	}
 
-	static void initStacksByRange(IStack[] stacks, int range) {
+	static void initStacksByRange(IStackRefined[] stacks, int range) {
 		for (int i = 1; i < range; i++) {
 			for (int j = 0; j < stacks.length; j++) {
 				stacks[j].push(i);

@@ -1,5 +1,6 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.implementation.IStack;
 import edu.kis.vh.stacks.implementation.StackArray;
 
 /**

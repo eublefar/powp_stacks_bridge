@@ -1,7 +1,5 @@
 package edu.kis.vh.stacks.implementation;
 
-import edu.kis.vh.stacks.IStack;
-
 public class StackArray implements IStack {
 	protected static final int CAPACITY = 12;
 

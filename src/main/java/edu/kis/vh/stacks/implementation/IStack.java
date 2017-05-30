@@ -1,4 +1,4 @@
-package edu.kis.vh.stacks;
+package edu.kis.vh.stacks.implementation;
 
 /**
  * @author evil_unicorn
@@ -20,5 +20,5 @@ public interface IStack {
 	int top();
 
 	int pop();
-
+// commit message contains answer for 17th task.
 }

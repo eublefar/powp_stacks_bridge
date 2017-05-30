@@ -1,5 +1,7 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.implementation.IStack;
+
 public class StackHanoi extends Stack {
 
 	public StackHanoi() {

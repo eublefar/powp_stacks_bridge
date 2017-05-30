@@ -1,7 +1,5 @@
 package edu.kis.vh.stacks.implementation;
 
-import edu.kis.vh.stacks.IStack;
-
 /**
  * @author nik
  * metody uzyteczne do refaktoryzacji:
