@@ -1,20 +1,28 @@
 package edu.kis.vh.stacks.demo;
 
-import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.IStack;
-import edu.kis.vh.stacks.Stack;
+import edu.kis.vh.stacks.StackHanoi;
+import edu.kis.vh.stacks.factory.ArrayStacksFactory;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
+import edu.kis.vh.stacks.factory.IStacksFactory;
+import edu.kis.vh.stacks.factory.ListStacksFactory;
 
 class StacksDemo {
 
 	public static void main(String[] args) {
-		DefaultStacksFactory factory = new DefaultStacksFactory();
+		IStacksFactory factory = new DefaultStacksFactory();
 //		second line should start after braces
+		testStacks(factory);
+		
+		factory = new ListStacksFactory();
+		testStacks(factory);
+		
+		factory = new ArrayStacksFactory();
 		testStacks(factory);
 	}
 
-	static void testStacks(DefaultStacksFactory factory) {
-		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(),
+	static void testStacks(IStacksFactory factory) {
+		IStack[] stacks = { factory.getStandardStack(), factory.getFalseStack(),
 						   factory.getFIFOStack(), factory.getHanoiStack()};
 //		no braces
 		initStacksByRange(stacks, 15);
@@ -31,7 +39,7 @@ class StacksDemo {
 //		blank lines
 	}
 
-	static void printStacks(Stack[] stacks) {
+	static void printStacks(IStack[] stacks) {
 		for (int i = 0; i < stacks.length; i++) {
 //			braces
 			while (!stacks[i].isEmpty()) {
