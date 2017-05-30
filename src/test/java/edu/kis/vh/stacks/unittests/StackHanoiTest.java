@@ -1,11 +1,39 @@
 package edu.kis.vh.stacks.unittests;
 
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
 import edu.kis.vh.stacks.StackHanoi;
-
+import edu.kis.vh.stacks.implementation.IStack;
+import edu.kis.vh.stacks.implementation.StackArray;
+import edu.kis.vh.stacks.implementation.StackList;
+@RunWith(value = Parameterized.class)
 public class StackHanoiTest {
+	
+	public IStack implementation;
+	
+	@Parameters
+	public static List<Object[]> data() {
+		return Arrays.asList(new Object[][]{{new StackArray()}, {new StackList()}});
+	}
+	
+	public StackHanoiTest(IStack implementation) {
+		this.implementation = implementation;
+	}
+
+	@After
+	public void tearDown() {
+		while(!implementation.isEmpty()) {
+			implementation.pop();
+		}
+	}
 	
 	@Test
 	public void testPush() {

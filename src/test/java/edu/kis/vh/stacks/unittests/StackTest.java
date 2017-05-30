@@ -1,17 +1,46 @@
 package edu.kis.vh.stacks.unittests;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
-
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized.Parameters;
+import org.junit.runners.Parameterized;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.implementation.IStack;
 import edu.kis.vh.stacks.implementation.StackArray;
+import edu.kis.vh.stacks.implementation.StackList;
 
+@RunWith(value = Parameterized.class)
 public class StackTest {
 
+	public IStack implementation;
+	
+	@Parameters
+	public static List<Object[]> data() {
+		return Arrays.asList(new Object[][]{{new StackArray()}, {new StackList()}});
+	}
+	
+	public StackTest(IStack implementation) {
+		this.implementation = implementation;
+	}
+
+	@After
+	public void tearDown() {
+		while(!implementation.isEmpty()) {
+			implementation.pop();
+		}
+	}
+
+	
 	@Test
 	public void testPush() {
-		Stack stackObj = new Stack();
+		
+		Stack stackObj = new Stack(implementation);
 		int testValue = 4;
 		stackObj.push(testValue);
 
@@ -21,7 +50,7 @@ public class StackTest {
 
 	@Test
 	public void testIsEmpty() {
-		Stack stackObj = new Stack();
+		Stack stackObj = new Stack(implementation);
 		boolean result = stackObj.isEmpty();
 		Assert.assertEquals(true, result);
 
@@ -48,7 +77,7 @@ public class StackTest {
 
 	@Test
 	public void testTop() {
-		Stack stackObj = new Stack();
+		Stack stackObj = new Stack(implementation);
 		final int EMPTY_STACK_VALUE = 0;
 
 		int result = stackObj.top();
@@ -65,7 +94,7 @@ public class StackTest {
 
 	@Test
 	public void testPop() {
-		Stack stackObj = new Stack();
+		Stack stackObj = new Stack(implementation);
 		final int EMPTY_STACK_VALUE = 0;
 
 		int result = stackObj.pop();
